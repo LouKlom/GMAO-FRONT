@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../../Components/Navbar'
 import AdministrationNav from '../AdministrationNav'
-import { Link } from 'react-router-dom';
 import MachinePopup from './MachinePopup';
 
 import axios from 'axios';
@@ -77,9 +76,9 @@ export default function MachineAdmin() {
                                 <td className="p-2">{item.emplacement.emplacement}</td>
                                 <td className="p-2">{item.actif ? 'Oui' : 'Non'}</td>
                                 <td className="text-right p-2">
-                                    <Link to={`/Administration/MachineDetails/${item.id}`} className="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+                                <button onClick={() => { window.location.href = `/Administration/MachineDetails/${item.id}` }} className="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
                                     Détails
-                                    </Link>
+                                </button>
                                 </td>
                                 </tr>
                             ))}
