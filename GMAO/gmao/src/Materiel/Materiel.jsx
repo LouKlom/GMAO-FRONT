@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../Components/Navbar';
+import axios from 'axios';
 
 export default function Materiel() {
-  const data = [
-    { id: 1, modele: "Modèle A", fabricant: "Fabricant 1", fournisseur: "Fournisseur X", emplacement: "Emplacement A" },
-    { id: 2, modele: "Modèle B", fabricant: "Fabricant 2", fournisseur: "Fournisseur Y", emplacement: "Emplacement B" },
-    // ... more data
-  ];
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const accessToken = localStorage.getItem('access_token');
+      const response = await axios.get('http://localhost:8080/api/machine', {
+        headers: {
+          Accept: '*/*',
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
+      const responseData = await response.data;
+      setData(responseData);
+    };
+
+    fetchData();
+  }, []);
+
+  console.log(data);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -23,16 +38,20 @@ export default function Materiel() {
                   <th className="text-left p-2">Fabricant</th>
                   <th className="text-left p-2">Fournisseur</th>
                   <th className="text-left p-2">Emplacement</th>
+                  <th className="text-left p-2">Actif</th>
                 </tr>
               </thead>
               <tbody>
-                {data.map((machine) => (
-                  <tr key={machine.id} className="border-t">
-                    <td className="p-2">{machine.id}</td>
-                    <td className="p-2">{machine.modele}</td>
-                    <td className="p-2">{machine.fabricant}</td>
-                    <td className="p-2">{machine.fournisseur}</td>
-                    <td className="p-2">{machine.emplacement}</td>
+                {data.map((item) => (
+                  <tr key={item.id} className="border-t">
+                    <td className="p-2">{item.id}</td>
+                    <td className="p-2">{item.modele}</td>
+                    <td className="p-2">{item.fabricant?.nom}</td> 
+                    <td className="p-2">{item.fournisseur?.nom}</td>
+                    <td className="p-2">{item.emplacement?.emplacement}</td>
+                    <td className={`p-2 ${item.actif ? 'bg-green-500 text-white' : 'bg-red-500 text-white'}`}>
+                      {item.actif ? 'Oui' : 'Non'}
+                    </td>
                   </tr>
                 ))}
               </tbody>
