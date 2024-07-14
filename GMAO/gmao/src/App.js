@@ -7,6 +7,7 @@ import Materiel from "./Materiel/Materiel"
 import Login from "./Login/Login";
 import Piece from "./Piece/Piece";
 import IncidentsDetails from "./Incidents/IncidentsDetails";
+import AdminStatut from "./Administration/Statut/AdminStatut";
 
 
 // Administration
@@ -55,6 +56,7 @@ function App() {
         <Route path="/Administration/Pieces" element={<AdminPiece/>} />
         <Route path="/Administration/Fabriquants" element={<AdminFabricant/>} />
         <Route path="/Administration/Pannes" element={<AdminPanne/>} />
+        <Route path="/Administration/Statut" element={<AdminStatut/>} />
 
       </Routes>
       </BrowserRouter>
