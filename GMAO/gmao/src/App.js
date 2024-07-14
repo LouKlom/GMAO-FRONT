@@ -20,6 +20,7 @@ import AdminPiece from "./Administration/Pieces/AdminPiece";
 import AdministrationMachineDetails from "./Administration/Machine/AdministrationMachineDetails";
 import AdminFabricant from "./Administration/Fabricant/AdminFabricant";
 import AdminPanne from "./Administration/Panne/AdminPanne";
+import AdminPreventive from "./Administration/Preventive/AdminPreventive";
 
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
@@ -58,6 +59,7 @@ function App() {
         <Route path="/Administration/Fabriquants" element={<AdminFabricant/>} />
         <Route path="/Administration/Pannes" element={<AdminPanne/>} />
         <Route path="/Administration/Statut" element={<AdminStatut/>} />
+        <Route path="/Administration/Preventives" element={<AdminPreventive/>} />
 
       </Routes>
       </BrowserRouter>

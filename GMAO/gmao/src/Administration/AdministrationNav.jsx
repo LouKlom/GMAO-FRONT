@@ -6,7 +6,7 @@ export default function AdministrationNav() {
         <nav className="bg-orange-700 text-white p-4 mx-10 mt-10 rounded-lg">
         <ul className="flex flex-row justify-between items-center px-4 py-4">
             <li>
-            <a href="/Administration/GestionCompte" className="text-lg font-medium hover:text-red-500">Gestion des Comptes</a>
+            <a href="/Administration/GestionCompte" className="text-lg font-medium hover:text-red-500">Comptes</a>
             </li>
             <li>
             <a href="/Administration/Fournisseurs" className="text-lg font-medium hover:text-red-500">Fournisseurs</a>
@@ -28,6 +28,9 @@ export default function AdministrationNav() {
             </li>
             <li>
             <a href="/Administration/Statut" className="text-lg font-medium hover:text-red-500">Statut</a>
+            </li>
+            <li>
+            <a href="/Administration/Preventives" className="text-lg font-medium hover:text-red-500">Int Préventives</a>
             </li>
         </ul>
         </nav>

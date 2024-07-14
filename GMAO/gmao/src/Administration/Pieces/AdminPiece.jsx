@@ -12,7 +12,7 @@ export default function AdminPiece() {
 
   const [data, setData] = useState([]);
 
-     // Récupération Machines
+     // Récupération Piece
     useEffect(() => {
       const fetchData = async () => {
         const accessToken = localStorage.getItem('access_token');

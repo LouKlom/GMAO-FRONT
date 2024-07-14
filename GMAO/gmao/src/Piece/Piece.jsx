@@ -1,12 +1,30 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Navbar from '../Components/Navbar';
+import axios from 'axios';
+
+
 
 export default function Piece() {
-  const data = [
-    { id: 1, nom: "Pièce A", fabricant: "Fabricant 1", fournisseur: "Fournisseur X", description: "Description de la pièce A", stock: 10 },
-    { id: 2, nom: "Pièce B", fabricant: "Fabricant 2", fournisseur: "Fournisseur Y", description: "Description de la pièce B", stock: 20 },
-    // ... more data
-  ];
+  const [data, setData] = useState([]);
+
+
+     // Récupération Piece
+    useEffect(() => {
+      const fetchData = async () => {
+        const accessToken = localStorage.getItem('access_token');
+        const response = await axios.get('http://localhost:8080/api/piece', {
+          headers: {
+            'Accept': '*/*',
+            'Authorization': `Bearer ${accessToken}`,
+            
+          },
+        });
+        const responseData = await response.data;
+        setData(responseData);
+      };
+  
+      fetchData();
+    }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -19,22 +37,22 @@ export default function Piece() {
               <thead>
                 <tr className="bg-gray-800 text-white">
                   <th className="text-left p-2">ID</th>
-                  <th className="text-left p-2">Nom</th>
+                  <th className="text-left p-2">Modèle</th>
+                  <th className="text-left p-2">Description</th>
                   <th className="text-left p-2">Fabricant</th>
                   <th className="text-left p-2">Fournisseur</th>
-                  <th className="text-left p-2">Description</th>
-                  <th className="text-right p-2">Stock</th>
+                  <th className="text-left p-2">Stock</th>
                 </tr>
               </thead>
               <tbody>
-                {data.map((piece) => (
-                  <tr key={piece.id} className="border-t">
-                    <td className="p-2">{piece.id}</td>
-                    <td className="p-2">{piece.nom}</td>
-                    <td className="p-2">{piece.fabricant}</td>
-                    <td className="p-2">{piece.fournisseur}</td>
-                    <td className="p-2">{piece.description}</td>
-                    <td className="text-right p-2">{piece.stock}</td>
+                {data.map((item) => (
+                  <tr key={item.id} className="border-t">
+                    <td className="p-2">{item.id}</td>
+                    <td className="p-2">{item.nom}</td>
+                    <td className="p-2">{item.description}</td>
+                    <td className="p-2">{item.fabricant?.nom}</td> 
+                    <td className="p-2">{item.fournisseur?.nom}</td>
+                    <td className="p-2">{item.stock}</td>
                   </tr>
                 ))}
               </tbody>
