@@ -3,7 +3,7 @@ import Navbar from '../Components/Navbar';
 
 export default function Piece() {
   const data = [
-    { id: 1, nom: "pie A", fabricant: "Fabricant 1", fournisseur: "Fournisseur X", description: "Description de la pièce A", stock: 10 },
+    { id: 1, nom: "Pièce A", fabricant: "Fabricant 1", fournisseur: "Fournisseur X", description: "Description de la pièce A", stock: 10 },
     { id: 2, nom: "Pièce B", fabricant: "Fabricant 2", fournisseur: "Fournisseur Y", description: "Description de la pièce B", stock: 20 },
     // ... more data
   ];
