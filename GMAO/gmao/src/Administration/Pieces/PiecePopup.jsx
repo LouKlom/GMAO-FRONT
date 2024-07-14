@@ -73,7 +73,7 @@ const PiecePopup = ({ onClose }) => {
       const response = await axios.post('http://localhost:8080/api/piece', {
         nom: nom,
         description: description,
-        stock: 10,
+        stock: stock,
         fournisseurId: selectedFournisseurId,
         fabricantId: selectedFabricantId,
         machineIds: [0]
