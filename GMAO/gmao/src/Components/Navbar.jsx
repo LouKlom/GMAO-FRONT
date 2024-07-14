@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   const navItems = [
-    { name: 'GMAO', path: '/Dashboard' },
+    { name: 'DashBoard', path: '/Dashboard' },
     { name: 'Incidents', path: '/Incidents' },
     { name: 'Machines', path: '/Materiel' },
     { name: 'Pieces', path: '/Pieces' },
@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <div>
       <RequireAuth />
-      <nav className="bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 text-white shadow-md w-full">
+      <nav className="bg-gradient-to-r from-orange-600 via-orange-400 to-red-500 text-white shadow-md w-full">
         <div className="container mx-auto flex justify-between items-center px-6 py-4">
           <div className="text-2xl font-extrabold">
             <a href="/Dashboard" className="hover:text-gray-200 transition duration-300">

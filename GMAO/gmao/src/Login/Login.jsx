@@ -40,7 +40,7 @@ export default function Login() {
                 <div className="mb-6 text-center">
                     <img src='./GMAO_LOGO.png' alt='Logo' className="mx-auto w-24 h-24 rounded-full shadow-md" />
                 </div>
-                <h2 className="text-2xl font-bold mb-6 text-gray-700 text-center">Bienvenue à GMAO</h2>
+                <h2 className="text-2xl font-bold mb-6 text-gray-700 text-center">GMAO - Connexion</h2>
                 {error && <div className="bg-red-100 text-red-700 p-3 rounded mb-4 text-center">{error}</div>}
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
