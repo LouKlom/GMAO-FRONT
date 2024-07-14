@@ -20,39 +20,39 @@ export default function Profil() {
 
       return (
         
-        <div>
-          <Navbar/>
-          <div className="bg-gray-100 p-4 mx-10 mt-10">
-          <h2 className="text-2xl font-bold">Profil</h2>
-    
+        <div className="min-h-screen bg-gray-200 flex flex-col">
+      <Navbar />
+      <div className="flex-grow flex flex-col items-center pt-20">
+        <div className="bg-white p-8 mt-10 mx-4 md:mx-10 lg:mx-20 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 w-full md:w-3/4 lg:w-1/2">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Profil</h2>
+
           <div className="mt-4">
             <p className="text-gray-800">ID:</p>
             <span className="font-bold">{utilisateur.id}</span>
           </div>
 
-
           <div className="mt-4">
             <p className="text-gray-800">Nom:</p>
             <span className="font-bold">{utilisateur.nom} {utilisateur.prénom}</span>
           </div>
-    
+
           <div className="mt-4">
             <p className="text-gray-800">Email:</p>
             <span className="font-bold">{utilisateur.email}</span>
           </div>
-    
+
           <div className="mt-4">
             <p className="text-gray-800">Téléphone:</p>
             <span className="font-bold">{utilisateur.téléphone}</span>
           </div>
-    
+
           <div className="mt-4">
             <p className="text-gray-800">Adresse:</p>
             <span className="font-bold">{utilisateur.adresse}</span>
           </div>
         </div>
-        </div>
-
+      </div>
+    </div>
 
 
 

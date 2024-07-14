@@ -3,31 +3,18 @@ import { useParams } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 
 export default function IncidentDetails() {
-  //const [incidentData, setIncidentData] = useState(null); // State to store incident details
-  const { incidentId } = useParams(); // Get the incidentId from the URL
+  const { incidentId } = useParams();
 
+  console.log(incidentId);
 
-  console.log(incidentId)
-  /*
-  useEffect(() => {
-    fetch(`/api/incidents/${incidentId}`) // Replace with your actual API endpoint
-      .then((response) => response.json())
-      .then((data) => setIncidentData(data));
-  }, [incidentId]); // Dependency array to trigger effect when incidentId changes
-
-  if (!incidentData) {
-    return <div>Chargement des détails de l'incident...</div>; // Loading indicator
-  }
-*/
   return (
-    <div>
-        <Navbar/>
-      <h2>Détails de l'incident {incidentId}</h2>
-
-      <div className="bg-gray-100 p-4 mx-10 mt-10">
-        <h1 className="text-black text-2xl font-bold">Incident N° {incidentId}</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo totam maiores atque repellat, sunt dolores earum alias rem deserunt, saepe ullam, vel facere voluptatum sequi nam optio blanditiis a? Necessitatibus.</p>
-
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <div className="flex-grow bg-gray-200 flex flex-col items-center pt-20">
+        <div className="bg-white p-8 mt-10 mx-4 md:mx-10 lg:mx-20 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 w-full md:w-3/4 lg:w-1/2">
+          <h1 className="text-3xl font-bold text-gray-800 mb-4">Incident N° {incidentId}</h1>
+          <p className="text-gray-700">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo totam maiores atque repellat, sunt dolores earum alias rem deserunt, saepe ullam, vel facere voluptatum sequi nam optio blanditiis a? Necessitatibus.</p>
+        </div>
       </div>
     </div>
   );
