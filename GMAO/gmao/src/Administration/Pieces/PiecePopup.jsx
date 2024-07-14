@@ -63,7 +63,7 @@ const PiecePopup = ({ onClose }) => {
         stock: stock,
         fournisseurId: selectedFournisseurId,
         fabricantId: selectedFabricantId,
-        machineIds: [1, 2]
+        machineIds: [0]
     };
 
     console.log(formData)
@@ -76,7 +76,7 @@ const PiecePopup = ({ onClose }) => {
         stock: 10,
         fournisseurId: selectedFournisseurId,
         fabricantId: selectedFabricantId,
-        machineIds: [1]
+        machineIds: [0]
       }, {
         headers: {
           'Authorization': `Bearer ${accessToken}`,
@@ -96,7 +96,7 @@ const PiecePopup = ({ onClose }) => {
       setIsLoading(false); 
     }
 
-    //window.location.reload()
+    window.location.reload()
   };
 
   return (
