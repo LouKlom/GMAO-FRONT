@@ -22,7 +22,7 @@ export default function AdminPanne() {
     useEffect(() => {
         const fetchData = async () => {
           const accessToken = localStorage.getItem('access_token');
-          const response = await axios.get('http://localhost:8080/api/type_panne', {
+          const response = await axios.get('http://localhost:8080/api/type-panne', {
             headers: {
               'Accept': '*/*',
               'Authorization': `Bearer ${accessToken}`,

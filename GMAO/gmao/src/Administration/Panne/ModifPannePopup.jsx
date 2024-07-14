@@ -16,7 +16,7 @@ const PopupForm = ({ onClose, selectedItemId, selectedNom }) => {
     setError(null); 
 
     try {
-      const response = await axios.put(`http://localhost:8080/api/type_panne/${selectedItemId}`, {
+      const response = await axios.put(`http://localhost:8080/api/type-panne/${selectedItemId}`, {
         nom: nom, 
       }, {
         headers: {

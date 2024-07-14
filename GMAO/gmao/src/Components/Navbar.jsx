@@ -16,7 +16,7 @@ export default function Navbar() {
     { name: 'Incidents', path: '/Incidents' },
     { name: 'Machines', path: '/Materiel' },
     { name: 'Pieces', path: '/Pieces' },
-    { name: 'Interventions', path: '/Interventions' },
+    { name: 'Interventions Préventives', path: '/InterventionPreventives' },
     { name: 'Profil', path: '/Profil' },
     { name: 'Administration', path: '/Administration' },
   ];

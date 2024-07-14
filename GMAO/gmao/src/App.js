@@ -8,7 +8,7 @@ import Login from "./Login/Login";
 import Piece from "./Piece/Piece";
 import IncidentsDetails from "./Incidents/IncidentsDetails";
 import AdminStatut from "./Administration/Statut/AdminStatut";
-
+import InterventionPreventives from "./InterventionPreventives/InterventionPreventives";
 
 // Administration
 import Administration from "./Administration/Administration";
@@ -45,6 +45,7 @@ function App() {
         <Route path="/Login" element={<Login/>} />  
         <Route path="/Pieces" element={<Piece />} />
         <Route path="/Incidents/:incidentId" element={<IncidentsDetails />} />
+        <Route path="/InterventionPreventives" element={<InterventionPreventives/>} />
 
         [Pages d'administration]
         <Route path="/Administration" element={<Administration/>} />

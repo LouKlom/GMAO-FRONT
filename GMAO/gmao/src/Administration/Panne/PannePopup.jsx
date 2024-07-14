@@ -15,7 +15,7 @@ const PopupForm = ({ onClose }) => {
     setError(null); 
 
     try {
-      const response = await axios.post('http://localhost:8080/api/type_panne', {
+      const response = await axios.post('http://localhost:8080/api/type-panne', {
         nom: nom, 
       }, {
         headers: {
