@@ -30,7 +30,7 @@ export default function Piece() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <div className="flex-grow bg-gray-200 flex flex-col items-center pt-20">
-        <div className="bg-white p-8 mt-10 mx-4 md:mx-10 lg:mx-20 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 w-full md:w-3/4 lg:w-1/2">
+        <div className="bg-white p-8 mt-10 mx-4 md:mx-10 lg:mx-20 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
           <h1 className="text-3xl font-bold text-gray-800 mb-4">Stock de pièces</h1>
           <div className="container mx-auto">
             <table className="w-full bg-white shadow-md rounded-lg mt-8">
