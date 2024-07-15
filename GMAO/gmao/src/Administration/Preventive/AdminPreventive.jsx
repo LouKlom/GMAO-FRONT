@@ -10,7 +10,7 @@ export default function AdminPreventive() {
   const [preventives, setPreventives] = useState('')
   
 
-   // Construction liste Emplacements
+   // Construction liste preventives
    useEffect(() => {
     const fetchPreventives = async () => {
       try {

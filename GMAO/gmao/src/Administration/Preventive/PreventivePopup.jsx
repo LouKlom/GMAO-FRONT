@@ -10,10 +10,6 @@ const PopupForm = ({ onClose }) => {
   const [error, setError] = useState(null);
 
 
-
-
-
-
     // Récupération des intervalles
     useEffect(() => {
         const fetchIntervalles = async () => {
@@ -86,6 +82,7 @@ const PopupForm = ({ onClose }) => {
             id="titre"
             className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={titre}
+            onChange={(e) => setTitre(e.target.value)}
           />
         </div>
 
@@ -96,6 +93,7 @@ const PopupForm = ({ onClose }) => {
             id="description"
             className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={description}
+            onChange={(e) => setDescription(e.target.value)}
           />
         </div>
 
