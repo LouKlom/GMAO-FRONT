@@ -36,6 +36,8 @@ export default function MachineDetails() {
         },
       });
       const responseData = await response.data;
+      console.log("FGETCSSDFGEG")
+      console.log(response);
       setData(responseData);
       setIsLoading(false);
     };
@@ -52,20 +54,10 @@ export default function MachineDetails() {
 
       <div className="bg-gray-100 p-4 mx-10 mt-10">
         <h1 className="text-black text-2xl font-bold">Machine N° {machineID}</h1>
-        {isLoading ? (
-          <p>Loading machine details...</p>
-        ) : (
-          <>
-            <div className="mt-3">
-          <p className="text-gray-600">Modèle: {data.modele}</p>
-          <p className="text-gray-600">Emplacement: {data.emplacement.emplacement}</p>
-          <p className="text-gray-600">Fabricant: {data.fabricant.nom}</p>
-          <p className="text-gray-600">Fournisseur: {data.fournisseur.nom}</p>
-        </div>
+      </div>
 
-          </>
-        )}
-        </div>
+      <p>{JSON.stringify(data)}</p>
+
     </div>
   )
 }

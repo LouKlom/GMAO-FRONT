@@ -13,7 +13,7 @@ export default function Navbar() {
 
   const navItems = [
     { name: 'DashBoard', path: '/Dashboard' },
-    { name: 'Incidents', path: '/Incidents' },
+    { name: 'Pannes', path: '/Incidents' },
     { name: 'Machines', path: '/Materiel' },
     { name: 'Pieces', path: '/Pieces' },
     { name: 'Interventions Préventives', path: '/InterventionPreventives' },
