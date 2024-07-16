@@ -35,7 +35,7 @@ const PopupForm = ({ onClose }) => {
       setIsLoading(false); 
     }
 
-    //window.location.reload()
+    window.location.reload()
   };
 
   const handleChange = (event) => {
