@@ -44,7 +44,7 @@ export default function IncidentDetails() {
           },
         }
       );
-      navigate('/home'); // Redirect to home page using navigate
+      navigate('/Incidents'); // Redirect to home page using navigate
     } catch (error) {
       console.error('Error deleting incident:', error);
     }
