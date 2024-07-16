@@ -45,7 +45,7 @@ const PopupForm = ({ onClose }) => {
     setError(null); 
 
     try {
-      const response = await axios.post('http://localhost:8080/api/fournisseur', {
+      const response = await axios.post('http://localhost:8080/api/intervention-preventive', {
         titre: titre,
         description: description,
         intervalleId: selectedIntervalleId
@@ -98,20 +98,24 @@ const PopupForm = ({ onClose }) => {
         </div>
 
         <label htmlFor="intervalle" className="block text-gray-700">
-            Intervalle
-            </label>
-            <select
-                id="intervalle"
-                value={selectedIntervalleId}
-                onChange={(e) => setSelectedIntervalleId(e.target.value)}
-                className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                {intervalles.map((intervalle) => (
-                    <option key={intervalles.id} value={intervalles.id}>
-                    {intervalles.nbJours}
-                    </option>
-                ))}
-                </select>
+          Intervalle
+      </label>
+      <select
+          id="intervalle"
+          value={selectedIntervalleId}
+          onChange={(e) => setSelectedIntervalleId(e.target.value)}
+          className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+          {isLoading ? (
+              <p>Chargement des intervalles...</p>
+          ) : (
+              intervalles.length > 0 && intervalles.map((intervalle) => (
+                  <option key={intervalle.id} value={intervalle.id}>
+                      {intervalle.nbJours}
+                  </option>
+              ))
+          )}
+      </select>
 
 
 

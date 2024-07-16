@@ -46,9 +46,9 @@ export default function Materiel() {
                   <tr key={item.id} className="border-t">
                     <td className="p-2">{item.id}</td>
                     <td className="p-2">{item.modele}</td>
-                    <td className="p-2">{item.fabricant?.nom}</td> 
-                    <td className="p-2">{item.fournisseur?.nom}</td>
-                    <td className="p-2">{item.emplacement?.emplacement}</td>
+                    <td className="p-2">{item.fabricant}</td> 
+                    <td className="p-2">{item.fournisseur}</td>
+                    <td className="p-2">{item.emplacement}</td>
                     <td className={`p-2 ${item.actif ? 'bg-green-500 text-white' : 'bg-red-500 text-white'}`}>
                       {item.actif ? 'Oui' : 'Non'}
                     </td>

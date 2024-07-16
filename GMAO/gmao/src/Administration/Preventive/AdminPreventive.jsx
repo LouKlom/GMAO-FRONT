@@ -63,16 +63,22 @@ export default function AdminPreventive() {
                 <tr className="bg-gray-800 text-white">
                   <th className="text-left p-2">ID</th>
                   <th className="text-left p-2">Titre</th>
-                  <th className="text-right p-2">Description</th>
+                  <th className="text-left p-2">Description</th>
                   <th className="text-right p-2">Intervale</th>
                 </tr>
               </thead>
-
-              <tbody>
-                
-
-
-              </tbody>
+                {preventives.length > 0 && (
+                  <tbody>
+                    {preventives.map((item) => (
+                      <tr className="border-t">
+                        <td className="p-2">{item.id}</td>
+                        <td className="p-2">{item.titre}</td>
+                        <td className="p-2">{item.description}</td>
+                        <td className="text-right p-2">{item.intervalle.nbJours}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                )}
 
             </table>
           </div>

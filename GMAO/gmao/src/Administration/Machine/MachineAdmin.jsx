@@ -63,9 +63,9 @@ export default function MachineAdmin() {
                   <tr className="border-t" key={item.id}>
                     <td className="p-2">{item.id}</td>
                     <td className="p-2">{item.modele}</td>
-                    <td className="p-2">{item.fabricant.nom}</td>
-                    <td className="p-2">{item.fournisseur.nom}</td>
-                    <td className="p-2">{item.emplacement.emplacement}</td>
+                    <td className="p-2">{item.fabricant}</td>
+                    <td className="p-2">{item.fournisseur}</td>
+                    <td className="p-2">{item.emplacement}</td>
                     <td className="p-2">{item.actif ? 'Oui' : 'Non'}</td>
                     <td className="text-right p-2">
                       <Link
