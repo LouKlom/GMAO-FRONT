@@ -20,7 +20,6 @@ export default function MachineDetails() {
   
   const fullURL = window.location.href;
   const machineID = extractLastValueFromURL(fullURL);
-  //console.log(machineID);
 
 
 
@@ -36,8 +35,6 @@ export default function MachineDetails() {
         },
       });
       const responseData = await response.data;
-      console.log("FGETCSSDFGEG")
-      //console.log(response);
       setData(responseData);
       setIsLoading(false);
     };

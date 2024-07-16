@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import '../animations.css'; // Import the CSS file
+import '../animations.css';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -11,7 +11,7 @@ export default function Login() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        setError(''); // Clear previous error message
+        setError(''); 
 
         const data = {
             email,
@@ -19,16 +19,13 @@ export default function Login() {
         };
 
         try {
-            // Use Axios to send a POST request
             const response = await axios.post('http://localhost:8080/api/auth/authenticate', data);
   
-            // Récuperer Token et stocker vers Localstorage
             const { access_token } = response.data;
             localStorage.setItem('access_token', access_token);
 
             Navigate('/');
         } catch (error) {
-            // Handle errors (e.g., display error message)
             console.error('Error during login:', error);
             setError('Email ou mot de passe incorrect');
         }      

@@ -35,8 +35,21 @@ export default function Administration() {
       </div>
 
       <div className="bg-gray-100 p-4 mx-10 mt-10 rounded-lg">
-        <h1 className="text-black text-2xl font-bold">Note de version - v0.X</h1>
-        <p></p> <br />
+        
+
+        <h1 className="text-black text-2xl font-bold">Note de version - v1.0</h1>
+        <p>
+          - Ajout Administration interventions préventive <br/>
+          - Ajout Administration Statut <br/>
+          - Ajout Administration Panne <br/>
+          - Ajout Déclaration de pannes <br/>
+          - Ajout Code couleur sur les interventions préventives <br/>
+          - Ajout interventions préventives <br/>
+          - Relecture & correction du code <br/>
+          - Ajout jeu de données <br/>
+          - Ajout page d'accueil <br/>
+          - Suppression Dashboard
+        </p> <br />
 
         <h1 className="text-black text-2xl font-bold">Note de version - v0.10</h1>
         <p>

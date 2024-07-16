@@ -23,7 +23,7 @@ const PiecePopup = ({ onClose }) => {
             },
           });
         const fournisseurs = response.data;
-        setFournisseurs(fournisseurs); // Update fournisseurs state with fetched data
+        setFournisseurs(fournisseurs); 
       } catch (error) {
         console.error('Erreur lors de la récupération des fournisseurs:', error);
       }
@@ -56,17 +56,6 @@ const PiecePopup = ({ onClose }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    const formData = {
-      nom: nom,
-        description: description,
-        stock: stock,
-        fournisseurId: selectedFournisseurId,
-        fabricantId: selectedFabricantId,
-        machineIds: [0]
-    };
-
-    console.log(formData)
 
     try {
       const accessToken = localStorage.getItem('access_token');

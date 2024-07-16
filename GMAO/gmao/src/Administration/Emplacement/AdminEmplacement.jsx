@@ -15,6 +15,7 @@ export default function AdminEmplacement() {
 
   const [data, setData] = useState([]);
 
+  // Récypération des emplacements
   useEffect(() => {
     const fetchData = async () => {
       const accessToken = localStorage.getItem('access_token');

@@ -1,13 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../Components/Navbar';
 import AdministrationNav from '../AdministrationNav';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import MachinePopup from './MachinePopup';
 import axios from 'axios';
 
 export default function MachineAdmin() {
   const [isMachineOpen, setMachineOpen] = useState(false);
   const [data, setData] = useState([]);
+
+  /*
+  Ajout d'un bouton pour lien vers AdminitratioMachineDetails.jsx pour voir les infos de la machine
+
+
+<td className="text-right p-2">
+                      <Link
+                        to={`/Administration/MachineDetails/${item.id}`}
+                        className="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                      >
+                        Détails
+                      </Link>
+                    </td>
+
+
+  */
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -55,7 +72,6 @@ export default function MachineAdmin() {
                   <th className="text-left p-2">Fournisseur</th>
                   <th className="text-left p-2">Emplacement</th>
                   <th className="text-left p-2">Actif</th>
-                  <th className="text-right p-2">Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -67,14 +83,6 @@ export default function MachineAdmin() {
                     <td className="p-2">{item.fournisseur}</td>
                     <td className="p-2">{item.emplacement}</td>
                     <td className="p-2">{item.actif ? 'Oui' : 'Non'}</td>
-                    <td className="text-right p-2">
-                      <Link
-                        to={`/Administration/MachineDetails/${item.id}`}
-                        className="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-                      >
-                        Détails
-                      </Link>
-                    </td>
                   </tr>
                 ))}
               </tbody>

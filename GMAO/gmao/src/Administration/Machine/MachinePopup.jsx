@@ -83,19 +83,6 @@ const MachinePopup = ({ onClose }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    
-
-    const formData = {
-        modele: modele,
-        actif: true,
-        emplacementId: selectedEmplacementId,
-        fournisseurId: selectedFournisseurId,
-        fabricantID: selectedFabricantId,
-      };
-
-      console.log(formData)
-
     setIsLoading(true); 
     setError(null); 
 

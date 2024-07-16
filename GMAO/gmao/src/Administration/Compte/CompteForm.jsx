@@ -26,7 +26,7 @@ const ComptePopup = ({ onClose }) => {
             },
           });
         const emplacements = response.data;
-        setEmplacements(emplacements); // Update fournisseurs state with fetched data
+        setEmplacements(emplacements);
       } catch (error) {
         console.error('Erreur lors de la récupération des emplacements:', error);
       }
@@ -36,7 +36,7 @@ const ComptePopup = ({ onClose }) => {
   }, []);
 
 
-
+  // Création du compte utilisateur
   const handleSubmit = async (event) => {
     event.preventDefault();
 
